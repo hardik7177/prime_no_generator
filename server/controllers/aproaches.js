@@ -126,21 +126,22 @@ export const Aproach_5 = (a, b) => {
     return Arr;
   }
   for (let i = a; i <= b; i++) {
-    let isprime = 1;
+    let flag = 1;
     if (i == 2 || i == 3) {
-      isprime = 1;
+      flag = 1;
     } else if (i <= 1 || i % 2 == 0 || i % 3 == 0) {
-      isprime = 0;
+      flag = 0;
     }
     for (let j = 5; j * j <= i; j = j + 6) {
       if (i % j == 0 || i % (j + 2) == 0) {
-        isprime = 0;
+        flag = 0;
       }
     }
 
-    if (isprime == 1) {
+    if (flag == 1) {
       Arr.push(i);
     }
   }
   return Arr;
 };
+ 

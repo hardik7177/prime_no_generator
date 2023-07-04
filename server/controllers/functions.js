@@ -55,7 +55,7 @@ export const Create_Data = async (req, res) => {
      //  cheching that the range entered is valid or not.
      if ((start <= 0 && end <= 0) || end < start || (start < 0 && end > 0)) {
       res
-        .status(200)
+        .status(400)
         .json(
           " INVALID RANGE ENTERED.......{ PLEASE ENTER POSITIVE VALUE} AND {INCREASING RANGE}"
         );
